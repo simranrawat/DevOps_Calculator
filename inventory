@@ -1,2 +1,2 @@
 [ubuntu18]
-192.168.100.236 ansible_user=himank
+192.168.56.101 ansible_user=simran
