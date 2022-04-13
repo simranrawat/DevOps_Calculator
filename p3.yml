@@ -1,0 +1,15 @@
+---
+- name: Pull docker image of Calculator
+  hosts: all
+  tasks:
+    - name: Pull image
+      docker_image:
+        name: himankjn/check
+        source: pull
+    - name: deploy docker container
+      docker_container:
+        image: himankjn/check
+        name: container2
+        state: started
+        ports:
+          - "8080:80"
